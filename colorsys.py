@@ -1,5 +1,11 @@
-#This implements a chopped down relevant version of the colorsys library
-#to add HLS and HSV to RGB support.  Script altered to return RGB[0-255]
+# This module is implemented from CPython's colorsys.py
+#
+# It is available under the PYTHON SOFTWARE FOUNDATION LICENSE VERSION 2
+# License details are available at:
+# https://github.com/python/cpython/blob/3.4/LICENSE
+#
+# This implements a chopped down relevant version of the colorsys library
+# to add HLS and HSV to RGB support.  Script altered to return RGB[0-255]
 
 __all__ = ["hls_to_rgb","hsv_to_rgb"]
 
