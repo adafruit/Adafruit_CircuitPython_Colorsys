@@ -10,7 +10,7 @@ Introduction
     :alt: Discord
 
 .. image:: https://travis-ci.com/adafruit/Adafruit__CircuitPython_CPython.svg?branch=master
-    :target: https://travis-ci.com/adafruit/Adafruit__CircuitPython_CPython
+    :target: https://github.com/adafruit/Adafruit__CircuitPython_CPython/actions
     :alt: Build Status
 
 .. todo:: Describe what the library does.
