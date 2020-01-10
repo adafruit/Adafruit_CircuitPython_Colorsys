@@ -9,8 +9,8 @@ Introduction
     :target: https://discord.gg/nBQh6qu
     :alt: Discord
 
-.. image:: https://github.com/adafruit/Adafruit__CircuitPython_CPython/workflows/Build%20CI/badge.svg
-    :target: https://github.com/adafruit/Adafruit__CircuitPython_CPython/actions
+.. image:: https://github.com/adafruit/Adafruit_CircuitPython_CPython/workflows/Build%20CI/badge.svg
+    :target: https://github.com/adafruit/Adafruit_CircuitPython_CPython/actions
     :alt: Build Status
 
 .. todo:: Describe what the library does.
@@ -34,7 +34,7 @@ Contributing
 ============
 
 Contributions are welcome! Please read our `Code of Conduct
-<https://github.com/adafruit/Adafruit__CircuitPython_CPython/blob/master/CODE_OF_CONDUCT.md>`_
+<https://github.com/adafruit/Adafruit_CircuitPython_CPython/blob/master/CODE_OF_CONDUCT.md>`_
 before contributing to help this project stay welcoming.
 
 Documentation
