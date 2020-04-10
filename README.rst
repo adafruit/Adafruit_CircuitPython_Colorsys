@@ -13,7 +13,7 @@ Introduction
     :target: https://github.com/adafruit/Adafruit_CircuitPython_CPython/actions
     :alt: Build Status
 
-.. todo:: Describe what the library does.
+CPython modules made available for CircuitPython.
 
 Dependencies
 =============
@@ -28,7 +28,7 @@ This is easily achieved by downloading
 Usage Example
 =============
 
-.. todo:: Add a quick, simple example. It and other examples should live in the examples folder and be included in docs/examples.rst.
+See example in docs/examples.rst.
 
 Contributing
 ============
