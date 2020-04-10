@@ -38,7 +38,7 @@ source_suffix = ".rst"
 master_doc = "index"
 
 # General information about the project.
-project = "Adafruit_ CPython Library"
+project = "Adafruit CPython Library"
 copyright = "2017 Scott Shawcroft"
 author = "Scott Shawcroft"
 
