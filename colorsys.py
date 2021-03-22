@@ -1,3 +1,4 @@
+"""Conversion functions between RGB and other color systems"""
 # SPDX-FileCopyrightText: Python Software Foundation
 #
 # SPDX-License-Identifier: PSF-2.0
@@ -16,30 +17,31 @@ TWO_THIRD = 2.0 / 3.0
 # S: color saturation
 
 
-def hls_to_rgb(h, l, s):
-    if s == 0.0:
-        return l, l, l
-    if l <= 0.5:
-        m2 = l * (1.0 + s)
+def hls_to_rgb(hue, light, sat):
+    """ Converts HLS to RGB values """
+    if sat == 0.0:
+        return light, light, light
+    if light <= 0.5:
+        chroma2 = light * (1.0 + sat)
     else:
-        m2 = l + s - (l * s)
-    m1 = 2.0 * l - m2
+        chroma2 = light + sat - (light * sat)
+    chroma1 = 2.0 * light - chroma2
     return (
-        int(_v(m1, m2, h + ONE_THIRD) * 255),
-        int(_v(m1, m2, h) * 255),
-        int(_v(m1, m2, h - ONE_THIRD) * 255),
+        int(_v(chroma1, chroma2, hue + ONE_THIRD) * 255),
+        int(_v(chroma1, chroma2, hue) * 255),
+        int(_v(chroma1, chroma2, hue - ONE_THIRD) * 255),
     )
 
 
-def _v(m1, m2, hue):
+def _v(chroma1, chroma2, hue):
     hue = hue % 1.0
     if hue < ONE_SIXTH:
-        return m1 + (m2 - m1) * hue * 6.0
+        return chroma1 + (chroma2 - chroma1) * hue * 6.0
     if hue < 0.5:
-        return m2
+        return chroma2
     if hue < TWO_THIRD:
-        return m1 + (m2 - m1) * (TWO_THIRD - hue) * 6.0
-    return m1
+        return chroma1 + (chroma2 - chroma1) * (TWO_THIRD - hue) * 6.0
+    return chroma1
 
 
 # HSV: Hue, Saturation, Value
@@ -48,25 +50,28 @@ def _v(m1, m2, hue):
 # V: color brightness
 
 
-def hsv_to_rgb(h, s, v):
-    if s == 0.0:
-        return v, v, v
-    i = int(h * 6.0)  # XXX assume int() truncates!
-    f = (h * 6.0) - i
-    p = v * (1.0 - s)
-    q = v * (1.0 - s * f)
-    t = v * (1.0 - s * (1.0 - f))
+def hsv_to_rgb(  # pylint: disable=too-many-return-statements,inconsistent-return-statements
+    hue, sat, val
+):
+    """ Converts HSV to RGB values """
+    if sat == 0.0:
+        return val, val, val
+    i = int(hue * 6.0)  # assume int() truncates!
+    hue1 = (hue * 6.0) - i
+    chroma1 = val * (1.0 - sat)
+    chroma2 = val * (1.0 - sat * hue1)
+    chroma3 = val * (1.0 - sat * (1.0 - hue1))
     i = i % 6
     if i == 0:
-        return int(v * 255), int(t * 255), int(p * 255)
+        return int(val * 255), int(chroma3 * 255), int(chroma1 * 255)
     if i == 1:
-        return int(q * 255), int(v * 255), int(p * 255)
+        return int(chroma2 * 255), int(val * 255), int(chroma1 * 255)
     if i == 2:
-        return int(p * 255), int(v * 255), int(t * 255)
+        return int(chroma1 * 255), int(val * 255), int(chroma3 * 255)
     if i == 3:
-        return int(p * 255), int(q * 255), int(v * 255)
+        return int(chroma1 * 255), int(chroma2 * 255), int(val * 255)
     if i == 4:
-        return int(t * 255), int(p * 255), int(v * 255)
+        return int(chroma3 * 255), int(chroma1 * 255), int(val * 255)
     if i == 5:
-        return int(v * 255), int(p * 255), int(q * 255)
+        return int(val * 255), int(chroma1 * 255), int(chroma2 * 255)
     # Cannot get here
