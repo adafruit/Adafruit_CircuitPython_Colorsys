@@ -3,6 +3,24 @@
 #
 # SPDX-License-Identifier: PSF-2.0
 
+"""
+`colorsys`
+====================================================
+
+Subset of CPython module colorsys for use in CircuitPython.
+
+* Author(s): Python Software Foundation
+
+Implementation Notes
+--------------------
+
+**Software and Dependencies:**
+
+* Adafruit CircuitPython firmware for the supported boards:
+  https://github.com/adafruit/circuitpython/releases
+
+"""
+
 __all__ = ["hls_to_rgb", "hsv_to_rgb"]
 
 # Some floating point constants
