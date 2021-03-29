@@ -1,4 +1,3 @@
-"""Conversion functions between RGB and other color systems"""
 # SPDX-FileCopyrightText: Python Software Foundation
 #
 # SPDX-License-Identifier: PSF-2.0
@@ -8,6 +7,8 @@
 ====================================================
 
 Subset of CPython module colorsys for use in CircuitPython.
+
+Conversion functions between RGB and other color systems
 
 * Author(s): Python Software Foundation
 
