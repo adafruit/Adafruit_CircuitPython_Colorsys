@@ -1,7 +1,26 @@
-"""Conversion functions between RGB and other color systems"""
 # SPDX-FileCopyrightText: Python Software Foundation
 #
 # SPDX-License-Identifier: PSF-2.0
+
+"""
+`colorsys`
+====================================================
+
+Subset of CPython module colorsys for use in CircuitPython.
+
+Conversion functions between RGB and other color systems
+
+* Author(s): Python Software Foundation
+
+Implementation Notes
+--------------------
+
+**Software and Dependencies:**
+
+* Adafruit CircuitPython firmware for the supported boards:
+  https://github.com/adafruit/circuitpython/releases
+
+"""
 
 __all__ = ["hls_to_rgb", "hsv_to_rgb"]
 

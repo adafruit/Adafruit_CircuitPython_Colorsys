@@ -42,7 +42,7 @@ source_suffix = ".rst"
 master_doc = "index"
 
 # General information about the project.
-project = "Adafruit CPython Library"
+project = "Adafruit Colorsys Library"
 copyright = "2017 Scott Shawcroft"
 author = "Scott Shawcroft"
 
