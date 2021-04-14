@@ -118,7 +118,7 @@ html_static_path = ["_static"]
 html_favicon = "_static/favicon.ico"
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = "AdafruitCpythonLibrarydoc"
+htmlhelp_basename = "AdafruitColorsysLibrarydoc"
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -143,8 +143,8 @@ latex_elements = {
 latex_documents = [
     (
         master_doc,
-        "AdafruitCPythonLibrary.tex",
-        "AdafruitCPython Library Documentation",
+        "AdafruitColorsysLibrary.tex",
+        "AdafruitColorsys Library Documentation",
         author,
         "manual",
     ),
@@ -157,8 +157,8 @@ latex_documents = [
 man_pages = [
     (
         master_doc,
-        "AdafruitCPythonlibrary",
-        "Adafruit CPython Library Documentation",
+        "AdafruitColorsyslibrary",
+        "Adafruit Colorsys Library Documentation",
         [author],
         1,
     )
@@ -172,10 +172,10 @@ man_pages = [
 texinfo_documents = [
     (
         master_doc,
-        "AdafruitCPythonLibrary",
-        "Adafruit CPython Library Documentation",
+        "AdafruitColorsysLibrary",
+        "Adafruit Colorsys Library Documentation",
         author,
-        "AdafruitCPythonLibrary",
+        "AdafruitColorsysLibrary",
         "One line description of project.",
         "Miscellaneous",
     ),
