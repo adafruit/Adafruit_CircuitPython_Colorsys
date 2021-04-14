@@ -1,19 +1,19 @@
 Introduction
 ============
 
-.. image:: https://readthedocs.org/projects/adafruit-circuitpython-cpython/badge/?version=latest
-    :target: https://circuitpython.readthedocs.io/projects/cpython/en/latest/
+.. image:: https://readthedocs.org/projects/adafruit-circuitpython-colorsys/badge/?version=latest
+    :target: https://circuitpython.readthedocs.io/projects/colorsys/en/latest/
     :alt: Documentation Status
 
 .. image:: https://img.shields.io/discord/327254708534116352.svg
     :target: https://adafru.it/discord
     :alt: Discord
 
-.. image:: https://github.com/adafruit/Adafruit_CircuitPython_CPython/workflows/Build%20CI/badge.svg
-    :target: https://github.com/adafruit/Adafruit_CircuitPython_CPython/actions
+.. image:: https://github.com/adafruit/Adafruit_CircuitPython_Colorsys/workflows/Build%20CI/badge.svg
+    :target: https://github.com/adafruit/Adafruit_CircuitPython_Colorsys/actions
     :alt: Build Status
 
-CPython modules made available for CircuitPython.
+CPython module Colorsys made available for CircuitPython.
 
 Dependencies
 =============
