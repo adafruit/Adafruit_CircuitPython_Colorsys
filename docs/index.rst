@@ -29,7 +29,7 @@ Table of Contents
 .. toctree::
     :caption: Other Links
 
-    Download <https://github.com/adafruit/Adafruit__CircuitPython_CPython/releases/latest>
+    Download <https://github.com/adafruit/Adafruit__CircuitPython_Colorsys/releases/latest>
     CircuitPython Reference Documentation <https://circuitpython.readthedocs.io>
     CircuitPython Support Forum <https://forums.adafruit.com/viewforum.php?f=60>
     Discord Chat <https://adafru.it/discord>
