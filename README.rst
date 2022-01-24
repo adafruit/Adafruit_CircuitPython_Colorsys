@@ -2,7 +2,7 @@ Introduction
 ============
 
 .. image:: https://readthedocs.org/projects/adafruit-circuitpython-colorsys/badge/?version=latest
-    :target: https://circuitpython.readthedocs.io/projects/colorsys/en/latest/
+    :target: https://docs.circuitpython.org/projects/colorsys/en/latest/
     :alt: Documentation Status
 
 .. image:: https://img.shields.io/discord/327254708534116352.svg
@@ -33,7 +33,7 @@ See example in docs/examples.rst.
 Documentation
 =============
 
-API documentation for this library can be found on `Read the Docs <https://circuitpython.readthedocs.io/projects/colorsys/en/latest/>`_.
+API documentation for this library can be found on `Read the Docs <https://docs.circuitpython.org/projects/colorsys/en/latest/>`_.
 
 Contributing
 ============
