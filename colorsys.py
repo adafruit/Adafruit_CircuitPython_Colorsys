@@ -22,6 +22,11 @@ Implementation Notes
 
 """
 
+try:
+    from typing import Tuple
+except ImportError:
+    pass
+
 __all__ = ["hls_to_rgb", "hsv_to_rgb"]
 
 # Some floating point constants
@@ -36,7 +41,7 @@ TWO_THIRD = 2.0 / 3.0
 # S: color saturation
 
 
-def hls_to_rgb(hue, light, sat):
+def hls_to_rgb(hue: float, light: float, sat: float) -> Tuple[float, float, float]:
     """ Converts HLS to RGB values """
     if sat == 0.0:
         return light, light, light
@@ -52,7 +57,7 @@ def hls_to_rgb(hue, light, sat):
     )
 
 
-def _v(chroma1, chroma2, hue):
+def _v(chroma1: float, chroma2: float, hue: float) -> float:
     hue = hue % 1.0
     if hue < ONE_SIXTH:
         return chroma1 + (chroma2 - chroma1) * hue * 6.0
@@ -70,8 +75,8 @@ def _v(chroma1, chroma2, hue):
 
 
 def hsv_to_rgb(  # pylint: disable=too-many-return-statements,inconsistent-return-statements
-    hue, sat, val
-):
+    hue: float, sat: float, val: float
+) -> Tuple[float, float, float]:
     """ Converts HSV to RGB values """
     if sat == 0.0:
         return val, val, val
