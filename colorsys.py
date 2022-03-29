@@ -42,7 +42,7 @@ TWO_THIRD = 2.0 / 3.0
 
 
 def hls_to_rgb(hue: float, light: float, sat: float) -> Tuple[float, float, float]:
-    """ Converts HLS to RGB values """
+    """Converts HLS to RGB values"""
     if sat == 0.0:
         return light, light, light
     if light <= 0.5:
@@ -77,7 +77,7 @@ def _v(chroma1: float, chroma2: float, hue: float) -> float:
 def hsv_to_rgb(  # pylint: disable=too-many-return-statements,inconsistent-return-statements
     hue: float, sat: float, val: float
 ) -> Tuple[float, float, float]:
-    """ Converts HSV to RGB values """
+    """Converts HSV to RGB values"""
     if sat == 0.0:
         return val, val, val
     i = int(hue * 6.0)  # assume int() truncates!
