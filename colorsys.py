@@ -27,6 +27,9 @@ try:
 except ImportError:
     pass
 
+
+__version__ = "0.0.0+auto.0"
+__repo__ = "https://github.com/adafruit/Adafruit_CircuitPython_Colorsys.git"
 __all__ = ["hls_to_rgb", "hsv_to_rgb"]
 
 # Some floating point constants
