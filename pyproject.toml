@@ -38,7 +38,7 @@ classifiers = [
 dynamic = ["dependencies", "optional-dependencies"]
 
 [tool.setuptools]
-py-modules = ["adafruit_colorsys"]
+py-modules = ["colorsys"]
 
 [tool.setuptools.dynamic]
 dependencies = {file = ["requirements.txt"]}
