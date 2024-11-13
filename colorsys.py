@@ -60,9 +60,9 @@ def hls_to_rgb(hue: float, light: float, sat: float) -> Tuple[float, float, floa
         chroma2 = light + sat - (light * sat)
     chroma1 = 2.0 * light - chroma2
     return (
-        int(_v(chroma1, chroma2, hue + ONE_THIRD) * 255),
-        int(_v(chroma1, chroma2, hue) * 255),
-        int(_v(chroma1, chroma2, hue - ONE_THIRD) * 255),
+        _v(chroma1, chroma2, hue + ONE_THIRD),
+        _v(chroma1, chroma2, hue),
+        _v(chroma1, chroma2, hue - ONE_THIRD),
     )
 
 
@@ -101,15 +101,14 @@ def hsv_to_rgb(  # pylint: disable=too-many-return-statements,inconsistent-retur
     chroma3 = val * (1.0 - sat * (1.0 - hue1))
     i = i % 6
     if i == 0:
-        return int(val * 255), int(chroma3 * 255), int(chroma1 * 255)
+        return val, chroma3, chroma1
     if i == 1:
-        return int(chroma2 * 255), int(val * 255), int(chroma1 * 255)
+        return chroma2, val, chroma1
     if i == 2:
-        return int(chroma1 * 255), int(val * 255), int(chroma3 * 255)
+        return chroma1, val, chroma3
     if i == 3:
-        return int(chroma1 * 255), int(chroma2 * 255), int(val * 255)
+        return chroma1, chroma2, val
     if i == 4:
-        return int(chroma3 * 255), int(chroma1 * 255), int(val * 255)
+        return chroma3, chroma1, val
     if i == 5:
-        return int(val * 255), int(chroma1 * 255), int(chroma2 * 255)
-    # Cannot get here
+        return val, chroma1, chroma2
