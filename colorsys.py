@@ -83,9 +83,7 @@ def _v(chroma1: float, chroma2: float, hue: float) -> float:
 # V: color brightness
 
 
-def hsv_to_rgb(  # pylint: disable=too-many-return-statements,inconsistent-return-statements
-    hue: float, sat: float, val: float
-) -> Tuple[float, float, float]:
+def hsv_to_rgb(hue: float, sat: float, val: float) -> Tuple[float, float, float]:
     """Converts HSV to RGB values
 
     :param float hue: The hue of the color to convert
