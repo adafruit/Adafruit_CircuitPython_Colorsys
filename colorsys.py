@@ -67,7 +67,7 @@ def hls_to_rgb(hue: float, light: float, sat: float) -> Tuple[float, float, floa
 
 
 def _v(chroma1: float, chroma2: float, hue: float) -> float:
-    hue = hue % 1.0
+    hue %= 1.0
     if hue < ONE_SIXTH:
         return chroma1 + (chroma2 - chroma1) * hue * 6.0
     if hue < 0.5:
@@ -97,7 +97,7 @@ def hsv_to_rgb(hue: float, sat: float, val: float) -> Tuple[float, float, float]
     chroma1 = val * (1.0 - sat)
     chroma2 = val * (1.0 - sat * hue1)
     chroma3 = val * (1.0 - sat * (1.0 - hue1))
-    i = i % 6
+    i %= 6
     if i == 0:
         return val, chroma3, chroma1
     if i == 1:
